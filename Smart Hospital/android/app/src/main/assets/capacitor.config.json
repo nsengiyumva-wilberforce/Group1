@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Smart House",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

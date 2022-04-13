@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>GENERAL HOME</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="assets/home.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>Control the whole house</ion-card-subtitle>
+      <ion-card-title>HOUSE</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>Lights</ion-text>
+      <ion-list>
+        <ion-item>
+          <ion-button ion-button small color="success" (click)="btnOnClicked()">ON</ion-button> 
+        </ion-item>
+        <ion-item>
+          <ion-button ion-button small color="danger" (click)="btnOffClicked()">OFF</ion-button> 
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

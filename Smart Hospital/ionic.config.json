@@ -1,0 +1,7 @@
+{
+  "name": "WaterQualityMonitor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
