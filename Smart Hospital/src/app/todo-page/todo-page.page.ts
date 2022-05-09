@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BluetoothSerial } from '@ionic-native/bluetooth-serial/ngx';
 import { AlertController,ToastController } from '@ionic/angular';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-todo-page',
@@ -14,13 +15,14 @@ export class TodoPagePage implements OnInit {
   pairedDevices: any;
   gettingDevices: boolean;
   dataSend: string = "";
+  dataReceive: any;
+  status: string="NONE";
   
-  constructor(private bluetoothSerial: BluetoothSerial, private alertController: AlertController,private toastCtrl: ToastController) {
+  constructor(private bluetoothSerial: BluetoothSerial, private alertController: AlertController,private toastCtrl: ToastController, private cdr: ChangeDetectorRef) {
     bluetoothSerial.enable();
   }
 
-  ngOnInit(): void {
-    
+  ngOnInit(){
   }
   
   startScanning() {
@@ -135,14 +137,23 @@ export class TodoPagePage implements OnInit {
 
   btnOffClicked() {
     this.dataSend ='OFF';
-    this.showToast(this.dataSend);
-
+    this.showToast(this.dataSend)
     this.bluetoothSerial.write(this.dataSend).then(success => {
       this.showToast(success);
+      
     }, error => {
       this.showError(error)
     });
   }
+
+   readData(){
+     this.bluetoothSerial.read().then((data) => {
+      this.status = data;
+      this.bluetoothSerial.clear();
+});
+  }
+
+  
 
   async showError(error) {
     let alert = await this.alertController.create({

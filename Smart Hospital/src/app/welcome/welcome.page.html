@@ -1,70 +1,54 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>SMART HOUSE</ion-title>
+    <ion-title>SMART HOSPITAL</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="main_div">
-    <ion-card color="primary" routerLink="/todo-page">
-        <ion-card-content>
-        <ion-icon name="home-outline" slot="start" color="light"></ion-icon>
-        <ion-label>GENERAL HOUSE</ion-label>
-      </ion-card-content>
-    </ion-card>
-    
-    <ion-card color="primary" routerLink="/parents">
-        <ion-card-content>
-        <ion-icon name="people-circle-outline" slot="start" color="light"></ion-icon>
-        <ion-label>PARENTS BED ROOM</ion-label>
-      </ion-card-content>
-    </ion-card>
-    
-    <ion-card color="primary" routerLink="/kids">
-      <ion-card-content>
-        
-        <ion-icon name="people-outline" slot="start" color="light"></ion-icon>
-        <ion-label>KIDS BEDROOM</ion-label>
-      </ion-card-content>
-    </ion-card>
-    
-    <ion-card color="primary" routerLink="/seating">
-      <ion-card-content>
-        <ion-icon name="bed-outline" slot="start" color="light"></ion-icon>
-        <ion-label>SEATING ROOM</ion-label>
-      </ion-card-content>
-    </ion-card>
-    
-    <ion-card color="primary" routerLink="/dinning">
-      <ion-card-content>
-        <ion-icon name="fast-food-outline" slot="start" color="light"></ion-icon>
-        <ion-label>DINNING ROOM</ion-label>
-      </ion-card-content>
-    </ion-card>
-    
-    <ion-card color="primary" routerLink="/kitchen">
-      <ion-card-content>
-        
-        <ion-icon name="beer-outline" slot="start" color="light"></ion-icon>
-        <ion-label>KITCHEN</ion-label>
-      </ion-card-content>
-    </ion-card>
-    
-    <ion-card color="primary" routerLink="/kitchen">
-      <ion-card-content>
-        
-        <ion-icon name="beer-outline" slot="start" color="light"></ion-icon>
-        <ion-label>BATHROOM</ion-label>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card color="primary" routerLink="/home">
-      <ion-card-content>
-        
-        <ion-icon name="bluetooth-outline" slot="start" color="light"></ion-icon>
-        <ion-label>BLUETOOTH</ion-label>
-      </ion-card-content>
-    </ion-card>
-    </div>
-    
+   <ion-grid>
+     <ion-row>
+       <ion-col size="12" routerLink="/todo-page">
+         <ion-text>
+           <h4>General Hospital</h4>
+         </ion-text>
+       </ion-col>
+       <ion-col size="6" routerLink="/bathroom">
+        <ion-text>
+          <h4>Bathroom</h4>
+        </ion-text>
+      </ion-col>
+      <ion-col size="5" routerLink="/dinning">
+        <ion-text>
+          <h4>Dinning</h4>
+        </ion-text>
+      </ion-col>
+      <ion-col size="6" routerLink="/kids">
+        <ion-text>
+          <h4>Kids</h4>
+        </ion-text>
+      </ion-col>
+      <ion-col size="5" routerLink="/kitchen">
+        <ion-text>
+          <h4>Kitchen</h4>
+        </ion-text>
+      </ion-col>
+      <ion-col size="6" routerLink="/parents">
+        <ion-text>
+          <h4>Parents</h4>
+        </ion-text>
+      </ion-col>
+      <ion-col size="5" routerLink="/seating">
+        <ion-text>
+          <h4>Seating</h4>
+        </ion-text>
+      </ion-col>
+      <ion-col size="6" routerLink="/home">
+        <ion-text>
+          <h4>Bluetooth</h4>
+        </ion-text>
+      </ion-col>
+     </ion-row>
+   </ion-grid>
+    </div>    
 </ion-content>

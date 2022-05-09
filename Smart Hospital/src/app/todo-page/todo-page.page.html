@@ -18,10 +18,13 @@
       <ion-text>Lights</ion-text>
       <ion-list>
         <ion-item>
-          <ion-button ion-button small color="success" (click)="btnOnClicked()">ON</ion-button> 
+          <p>{{status}}</p>
         </ion-item>
         <ion-item>
-          <ion-button ion-button small color="danger" (click)="btnOffClicked()">OFF</ion-button> 
+          <ion-button ion-button small color="success" (click)="btnOnClicked();readData()">ON</ion-button> 
+        </ion-item>
+        <ion-item>
+          <ion-button ion-button small color="danger" (click)="btnOffClicked();readData()">OFF</ion-button> 
         </ion-item>
       </ion-list>
     </ion-card-content>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Ring / Vibrate
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_div">
+  <ion-list class="ion-padding-bottom">
+    <ion-radio-group [value]="loopMode" [(ngModel)]="loopMode">
+      <ion-list-header color="medium">
+        <ion-label>Select Alert Preference</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Once</ion-label>
+        <ion-radio slot="start" value="once"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Loop</ion-label>
+        <ion-radio slot="start" value="loop"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-card class="ion-margin-top">
+    <ion-card-header>
+      <ion-card-subtitle>Ionic Features</ion-card-subtitle>
+      <ion-card-title>Ring or Vibrate</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      You can make notifications, calls or events in your apps make sound or vibrate depending on the phone's audio mode
+      (ring/vibrate/silent). You can also decide whether to loop a particular sound or use a vibration pattern
+    </ion-card-content>
+  </ion-card>
+  <ion-footer>
+    <ion-button color="primary" (click)="createAlert()">Ring / Vibrate</ion-button>
+  </ion-footer>
+</div>
+</ion-content>
+
